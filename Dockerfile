@@ -62,13 +62,13 @@ RUN apt update && apt upgrade -y && \
 RUN apt-get install -y ffmpeg python3-pip curl
 RUN pip3 install --upgrade pip setuptools
 
-RUN mkdir /D3VIL-BOT/
-COPY . /D3VIL-BOT
-WORKDIR /D3VIL-BOT
+RUN mkdir /D3VILBOT/
+COPY . /D3VILBOT
+WORKDIR /D3VILBOT
 
 ENV PATH="/home/bot/bin:$PATH"
 
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","D3VIL-BOT"]
+CMD ["python3","-m","D3VILBOT"]

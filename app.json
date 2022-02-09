@@ -1,5 +1,5 @@
 {
-      "name": "D3VIL-BOT",
+      "name": "D3VILBOT",
       "description": "Telegram group management bot.",
       "logo": "https://telegra.ph/file/5de0856707d87af934cb2.jpg",
       "keywords": [
@@ -9,7 +9,7 @@
          "manager",
          "innexi"
       ],   
-   "repository": "https://github.com/D3VILGULSHAN/D3VIL-BOT",
+   "repository": "https://github.com/D3VILGULSHAN/D3VILBOT",
    "addons": [
       {
          "options": {

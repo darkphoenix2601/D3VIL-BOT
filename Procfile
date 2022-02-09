@@ -1,1 +1,1 @@
-worker: python3 -m D3VIL-BOT
+worker: python3 -m D3VILBOT
