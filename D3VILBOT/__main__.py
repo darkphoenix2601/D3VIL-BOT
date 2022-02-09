@@ -100,8 +100,8 @@ Haven't slept since: {}
 buttons = [
     [
         InlineKeyboardButton(
-            text=f"Add {D3VILBOT} To Your Group",
-            url=f"t.me/{BOT_USERNAME}?startgroup=true",
+            text=f"Add D3VILBOT To Your Group",
+            url=f"t.me/D3VIL_BOT?startgroup=true",
         )
     ],
     [
