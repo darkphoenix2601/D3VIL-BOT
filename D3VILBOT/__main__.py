@@ -24,17 +24,37 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-import html
 import importlib
-import json
-import re
-import sys
 import time
-import traceback
+import re
 from sys import argv
 from typing import Optional
+from platform import python_version as memek
 
-from pyrogram import idle
+from D3VILBOT import (
+    ALLOW_EXCL,
+    CERT_PATH,
+    DONATION_LINK,
+    LOGGER,
+    OWNER_ID,
+    PORT,
+    SUPPORT_CHAT,
+    TOKEN,
+    URL,
+    WEBHOOK,
+    SUPPORT_CHAT,
+    dispatcher,
+    StartTime,
+    telethn,
+    pbot,
+    updater,
+)
+
+# needed to dynamically load modules
+# NOTE: Module order is not guaranteed, specify that in the config file!
+from D3VILBOT.modules import ALL_MODULES
+from D3VILBOT.modules.helper_funcs.chat_status import is_user_admin
+from D3VILBOT.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -44,40 +64,16 @@ from telegram.error import (
     TimedOut,
     Unauthorized,
 )
-from telegram.ext import CallbackContext, CallbackQueryHandler, Filters, MessageHandler
-from telegram.ext.dispatcher import DispatcherHandlerStop
+from telegram.ext import (
+    CallbackContext,
+    CallbackQueryHandler,
+    CommandHandler,
+    Filters,
+    MessageHandler,
+)
+from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
-import D3VILBOT.modules.sql.users_sql as sql
-from D3VILBOT import (
-    BOT_NAME,
-    BOT_USERNAME,
-    CERT_PATH,
-    DONATION_LINK,
-    GROUP_START_IMG,
-    HELP_IMG,
-    LOGGER,
-    OWNER_ID,
-    PORT,
-    SUPPORT_CHAT,
-    TOKEN,
-    URL,
-    WEBHOOK,
-    StartTime,
-    dispatcher,
-    pbot,
-    telethn,
-    ubot,
-    updater,
-)
-
-# needed to dynamically load modules
-# NOTE: Module order is not guaranteed, specify that in the config file!
-from D3VILBOT.modules import ALL_MODULES
-from D3VILBOT.modules.disable import DisableAbleCommandHandler
-from D3VILBOT.modules.helper_funcs.alternate import typing_action
-from D3VILBOT.modules.helper_funcs.chat_status import is_user_admin
-from D3VILBOT.modules.helper_funcs.misc import paginate_modules
 
 
 def get_readable_time(seconds: int) -> str:
