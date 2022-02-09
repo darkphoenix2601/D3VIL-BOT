@@ -83,25 +83,166 @@ PM_START_TEXT = """
 ╰──────────────
 """
 buttons = [
-        [
-        
-        InlineKeyboardButton(
-            text="D3VIL BOT LOGS 🌟", url=f"https://t.me/Miko_logs"
-        ),
-    ],
     [
         InlineKeyboardButton(
-            text="UPDATES 🥳", url=f"https://t.me/D3VIL_GFX"
-        ),
-        InlineKeyboardButton(
-            text="SUPPORT ❤️", url=f"https://t.me/CRAZIEST_WORLD"
-        ),
+            text=f"Add {BOT_NAME} To Your Group",
+            url=f"t.me/{BOT_USERNAME}?startgroup=true",
+        )
     ],
     [
-        InlineKeyboardButton(text="📍 COMMANDS 📍", callback_data="help_back"
-        ),
+        InlineKeyboardButton(text="ɪɴғᴏ", callback_data="shasa_basichelp"),
+        InlineKeyboardButton(text="ɪɴʟɪɴᴇ", switch_inline_query_current_chat=""),
+    ],
+    [
+        InlineKeyboardButton(text="ʜᴇʟᴘ", callback_data="help_back"),
     ],
 ]
+
+elif query.data == "shasa_basichelp":
+        query.message.edit_text(
+            text=f"*Here's basic Help regarding* *How to use Me?*"
+            f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
+            f"\n• After adding promote me manually with full rights for faster experience.\n"
+            f"\n• Than send `/admincache@Shasa_RoBot` in that chat to refresh admin list in My database.\n"
+            f"\n\n*All done now use below given button's to know about use!*\n"
+            f"",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="ᴀᴅᴍɪɴ", callback_data="shasa_admin"),
+                        InlineKeyboardButton(text="ɴᴏᴛᴇs", callback_data="shasa_notes"),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="sᴜᴘᴘᴏʀᴛ", callback_data="shasa_support"
+                        ),
+                        InlineKeyboardButton(
+                            text="ᴄʀᴇᴅɪᴛ", callback_data="shasa_credit"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="•༶Bᴀᴄᴋ༶•", callback_data="shasa_back"
+                        ),
+                    ],
+                ]
+            ),
+        )
+    elif query.data == "shasa_admin":
+        query.message.edit_text(
+            text=f"*Let's make your group bit effective now*"
+            f"\nCongragulations, Miss Shasa now ready to manage your group."
+            f"\n\n*Admin Tools*"
+            f"\nBasic Admin tools help you to protect and powerup your group."
+            f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
+            f"\n\n*Welcome*"
+            f"\nLets set a welcome message to welcome new users coming to your group."
+            f"send `/setwelcome [message]` to set a welcome message!",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="•༶Bᴀᴄᴋ༶•", callback_data="shasa_basichelp"
+                        )
+                    ]
+                ]
+            ),
+        )
+
+    elif query.data == "shasa_notes":
+        query.message.edit_text(
+            text=f"<b> Setting up notes</b>"
+            f"\nYou can save message/media/audio or anything as notes"
+            f"\nto get a note simply use # at the beginning of a word"
+            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="•༶Bᴀᴄᴋ༶•", callback_data="shasa_basichelp"
+                        )
+                    ]
+                ]
+            ),
+        )
+    elif query.data == "shasa_support":
+        query.message.edit_text(
+            text="* Shasa support chats*" "\nJoin Support Group/Channel",
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", url="t.me/Shasa_News"),
+                        InlineKeyboardButton(
+                            text="ᴠᴄ ʜᴇʟᴘ", url="https://telegra.ph/Shasa-Music-08-15"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="sᴜᴘᴘᴏʀᴛ", url=f"https://telegram.dog/{SUPPORT_CHAT}"
+                        ),
+                        InlineKeyboardButton(
+                            text="ᴜᴘᴅᴀᴛᴇs", url="https://t.me/LionXupdates"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="•༶Bᴀᴄᴋ༶•", callback_data="shasa_basichelp"
+                        ),
+                    ],
+                ]
+            ),
+        )
+    elif query.data == "shasa_credit":
+        query.message.edit_text(
+            text=f"<b> SHASA DEV'S</b>\n"
+            f"\nHere Some Developers Helping in Making The Shasa RoBot",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="ᴅᴇᴠ", url="t.me/simpleboy786"),
+                        InlineKeyboardButton(
+                            text="ɢɪᴛʜᴜʙ", url="https://github.com/MdNoor786"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="ᴅᴇᴠ²", url="https://t.me/Copyless786"
+                        ),
+                        InlineKeyboardButton(
+                            text="ʀᴇᴅʟɪᴏɴ", url="https://t.me/Shasa_News/12"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="•༶Bᴀᴄᴋ༶•", callback_data="shasa_basichelp"
+                        ),
+                    ],
+                ]
+            ),
+        )
+    elif query.data == "shasa_back":
+        first_name = update.effective_user.first_name
+        query.message.edit_text(
+            PM_START_TEXT.format(
+                escape_markdown(context.bot.first_name),
+                escape_markdown(first_name),
+                escape_markdown(uptime),
+                sql.num_users(),
+                sql.num_chats(),
+            ),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=False,
+        )
+
 
 HELP_STRINGS = """
 `To Get To Know About All Commands Of The Bot You Type /help...`
