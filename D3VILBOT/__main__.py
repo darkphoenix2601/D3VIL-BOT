@@ -1,60 +1,16 @@
-"""
-MIT License
 
-Copyright (C) 2021 MdNoor786
 
-This file is part of @Shasa_RoBot (Telegram Bot)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-
+import html
 import importlib
-import time
+import json
 import re
+import sys
+import time
+import traceback
 from sys import argv
 from typing import Optional
-from platform import python_version as memek
 
-from D3VILBOT import (
-    ALLOW_EXCL,
-    CERT_PATH,
-    DONATION_LINK,
-    LOGGER,
-    OWNER_ID,
-    PORT,
-    SUPPORT_CHAT,
-    TOKEN,
-    URL,
-    WEBHOOK,
-    SUPPORT_CHAT,
-    dispatcher,
-    StartTime,
-    telethn,
-    pbot,
-    updater,
-)
-
-# needed to dynamically load modules
-# NOTE: Module order is not guaranteed, specify that in the config file!
-from D3VILBOT.modules import ALL_MODULES
-from D3VILBOT.modules.helper_funcs.chat_status import is_user_admin
-from D3VILBOT.modules.helper_funcs.misc import paginate_modules
+from pyrogram import idle
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -64,16 +20,38 @@ from telegram.error import (
     TimedOut,
     Unauthorized,
 )
-from telegram.ext import (
-    CallbackContext,
-    CallbackQueryHandler,
-    CommandHandler,
-    Filters,
-    MessageHandler,
-)
-from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
+from telegram.ext import CallbackContext, CallbackQueryHandler, Filters, MessageHandler
+from telegram.ext.dispatcher import DispatcherHandlerStop
 from telegram.utils.helpers import escape_markdown
 
+import D3VILBOT.modules.sql.users_sql as sql
+from D3VILBOT import (
+    CERT_PATH,
+    DONATION_LINK,
+    GROUP_START_IMG,
+    HELP_IMG,
+    LOGGER,
+    OWNER_ID,
+    PORT,
+    SUPPORT_CHAT,
+    TOKEN,
+    URL,
+    WEBHOOK,
+    StartTime,
+    dispatcher,
+    pbot,
+    telethn,
+    ubot,
+    updater,
+)
+
+# needed to dynamically load modules
+# NOTE: Module order is not guaranteed, specify that in the config file!
+from D3VILBOT.modules import ALL_MODULES
+from D3VILBOT.modules.disable import DisableAbleCommandHandler
+from D3VILBOT.modules.helper_funcs.alternate import typing_action
+from D3VILBOT.modules.helper_funcs.chat_status import is_user_admin
+from D3VILBOT.modules.helper_funcs.misc import paginate_modules
 
 
 def get_readable_time(seconds: int) -> str:
@@ -122,8 +100,8 @@ Haven't slept since: {}
 buttons = [
     [
         InlineKeyboardButton(
-            text=f"Add devilTo Your Group",
-            url=f"t.me/miko?startgroup=true",
+            text=f"Add {D3VILBOT} To Your Group",
+            url=f"t.me/{BOT_USERNAME}?startgroup=true",
         )
     ],
     [
