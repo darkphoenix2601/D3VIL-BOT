@@ -98,6 +98,8 @@ if ENV:
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
+    HELP_IMG = os.environ.get("HELP_IMG", True)
+    GROUP_START_IMG = os.environ.get("GROUP_START_IMG", True)
     ARQ_API_URL = "https://thearq.tech"
     ARQ_API_KEY = "ZWXCEZ-RTVXHT-NOVURC-FHCFZD-ARQ"
     LOG_GROUP_ID = os.environ.get("LOG_GROUP_ID", None)
@@ -168,6 +170,8 @@ else:
     WORKERS = Config.WORKERS
     BAN_STICKER = Config.BAN_STICKER
     ALLOW_EXCL = Config.ALLOW_EXCL
+    HELP_IMG = Config.HELP_IMG
+    START_IMG = Config.START_IMG
     CASH_API_KEY = Config.CASH_API_KEY
     TIME_API_KEY = Config.TIME_API_KEY
     AI_API_KEY = Config.AI_API_KEY
