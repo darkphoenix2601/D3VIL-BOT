@@ -73,34 +73,32 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-Miko_IMG = "https://telegra.ph/file/ecb9b93a96b0b1a0c4c1b.jpg"
+Miko_IMG = "http://telegra.ph//file/1aaf829187e69fd4a83c9.jpg"
 
 PM_START_TEXT = """
 ╭──────────────
-**HEY I am Miko🥀🍃[☘️](http://telegra.ph//file/2aa79f97f436845d44dbd.mp4)
-**am an Advanced Group Manager Bot, With Lots of Cool Features❤️.**
+**HEY I AM D3VILBOT[😈](http://telegra.ph//file/1aaf829187e69fd4a83c9.jpg)
+**AM AN ADVANCED GROUP MANAGER BOT , WITH LOTS OF COOL FEATURES .**
 `For More Information Use the Button Below or Send` /help 
 ╰──────────────
 """
 buttons = [
         [
+        
         InlineKeyboardButton(
-            text="𝙳𝚎𝚟𝚜👨‍💻", url=f"https://t.me/Miko_Devs"
-        ),
-        InlineKeyboardButton(
-            text="Miko 𝘭𝘰𝘨𝘴❤️", url=f"https://t.me/Miko_logs"
+            text="D3VIL BOT LOGS 🌟", url=f"https://t.me/Miko_logs"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="𝘜𝘱𝘥𝘢𝘵𝘦𝘴🤞", url=f"https://t.me/Miko_Updates"
+            text="UPDATES 🥳", url=f"https://t.me/Miko_Updates"
         ),
         InlineKeyboardButton(
-            text="𝘚𝘶𝘱𝘱𝘰𝘳𝘵😍", url=f"https://t.me/Miko_Support"
+            text="SUPPORT ❤️", url=f"https://t.me/Miko_Support"
         ),
     ],
     [
-        InlineKeyboardButton(text="𝘏𝘦𝘭𝘱 𝘢𝘯𝘥 𝘊𝘮𝘥𝘴❓", callback_data="help_back"
+        InlineKeyboardButton(text="📍 COMMANDS 📍", callback_data="help_back"
         ),
     ],
 ]
