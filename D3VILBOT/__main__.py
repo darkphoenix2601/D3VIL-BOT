@@ -91,10 +91,10 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="UPDATES 🥳", url=f"https://t.me/Miko_Updates"
+            text="UPDATES 🥳", url=f"https://t.me/D3VIL_GFX"
         ),
         InlineKeyboardButton(
-            text="SUPPORT ❤️", url=f"https://t.me/Miko_Support"
+            text="SUPPORT ❤️", url=f"https://t.me/CRAZIEST_WORLD"
         ),
     ],
     [
