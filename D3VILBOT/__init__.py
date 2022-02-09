@@ -104,7 +104,8 @@ if ENV:
     ARQ_API_KEY = "ZWXCEZ-RTVXHT-NOVURC-FHCFZD-ARQ"
     LOG_GROUP_ID = os.environ.get("LOG_GROUP_ID", None)
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
-    
+    SESSION_STRING = os.environ.get("SESSION_STRING", None)
+    STRING_SESSION = os.environ.get("STRING_SESSION", None)
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
@@ -152,7 +153,8 @@ else:
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
-
+    STRING_SESSION = Config.STRING_SESSION
+    SESSION_STRING = Config.SESSION_STRING
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
     MONGO_DB_URI = Config.MONGO_DB_URI
     HEROKU_API_KEY = Config.HEROKU_API_KEY
@@ -215,7 +217,12 @@ print("[INFO]: INITIALZING AIOHTTP SESSION")
 aiohttpsession = ClientSession()
 print("[INFO]: INITIALIZING ARQ CLIENT")
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
-
+ubot = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
+try:
+    ubot.start()
+except BaseException:
+    print("Userbot Error ! Have you added a STRING_SESSION in deploying??")
+    sys.exit(1)
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
