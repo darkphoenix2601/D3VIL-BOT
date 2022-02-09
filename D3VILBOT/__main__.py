@@ -78,7 +78,7 @@ Miko_IMG = "http://telegra.ph//file/1aaf829187e69fd4a83c9.jpg"
 PM_START_TEXT = """
 ╭──────────────
 **HEY I AM D3VILBOT[😈](http://telegra.ph//file/1aaf829187e69fd4a83c9.jpg)
-**AM AN ADVANCED GROUP MANAGER BOT , WITH LOTS OF COOL FEATURES .**
+**AM AN ADVANCED MANAGER BOT , WITH LOTS OF COOL FEATURES .**
 `For More Information Use the Button Below or Send` /help 
 ╰──────────────
 """
