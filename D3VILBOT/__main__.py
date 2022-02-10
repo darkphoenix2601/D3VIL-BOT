@@ -874,9 +874,7 @@ def main():
         )
         updater.start_polling(
             timeout=15,
-            read_latency=4,
-            drop_pending_updates=True,
-        )
+            read_latency=4)
 
     if len(argv) not in (1, 3, 4):
         telethn.disconnect()
