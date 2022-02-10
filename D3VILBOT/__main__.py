@@ -876,7 +876,6 @@ def main():
             timeout=15,
             read_latency=4,
             drop_pending_updates=True,
-            allowed_updates=Update.ALL_TYPES,
         )
 
     if len(argv) not in (1, 3, 4):
