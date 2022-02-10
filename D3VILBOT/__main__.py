@@ -826,25 +826,25 @@ def main():
         except BadRequest as e:
             LOGGER.warning(e.message)
 
-    test_handler = DisableAbleCommandHandler("test", test, run_async=True)
-    start_handler = DisableAbleCommandHandler("start", start, run_async=True)
+    test_handler = DisableAbleCommandHandler("test", test)
+    start_handler = DisableAbleCommandHandler("start", start )
 
-    help_handler = DisableAbleCommandHandler("help", get_help, run_async=True)
+    help_handler = DisableAbleCommandHandler("help", get_help)
     help_callback_handler = CallbackQueryHandler(
-        help_button, pattern=r"help_.*", run_async=True
+        help_button, pattern=r"help_.*",
     )
 
     settings_handler = DisableAbleCommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(
-        settings_button, pattern=r"stngs_", run_async=True
+        settings_button, pattern=r"stngs_", 
     )
 
     data_callback_handler = CallbackQueryHandler(
-        shasa_callback_data, pattern=r"shasa_", run_async=True
+        shasa_callback_data, pattern=r"shasa_", 
     )
-    donate_handler = DisableAbleCommandHandler("donate", donate, run_async=True)
+    donate_handler = DisableAbleCommandHandler("donate", donate,)
     migrate_handler = MessageHandler(
-        Filters.status_update.migrate, migrate_chats, run_async=True
+        Filters.status_update.migrate, migrate_chats, 
     )
 
     # dispatcher.add_handler(test_handler)
