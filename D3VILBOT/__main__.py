@@ -100,16 +100,16 @@ Haven't slept since: {}
 buttons = [
     [
         InlineKeyboardButton(
-            text=f"Add 𝐃𝟑𝐕𝐈𝐋 𝐁𝐎𝐓😈 To Your Group",
+            text=f"📍 ADD ME TO YOUR GROUP📍",
             url=f"t.me/D3VIL_BOT?startgroup=true",
         )
     ],
     [
-        InlineKeyboardButton(text="ɪɴғᴏ", callback_data="shasa_basichelp"),
-        InlineKeyboardButton(text="ɪɴʟɪɴᴇ", switch_inline_query_current_chat=""),
+        InlineKeyboardButton(text="INFO 👀", callback_data="shasa_basichelp"),
+        InlineKeyboardButton(text="INLINE 🌟", switch_inline_query_current_chat=""),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴘ", callback_data="help_back"),
+        InlineKeyboardButton(text="HELP 🔹", callback_data="help_back"),
     ],
 ]
 
