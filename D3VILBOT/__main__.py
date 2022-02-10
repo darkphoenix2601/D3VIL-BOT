@@ -497,12 +497,12 @@ def shasa_callback_data(update, context):
                     [
                         InlineKeyboardButton(text="ABOUT ", url="https://t.me/D3VIL_GFX"),
                         InlineKeyboardButton(
-                            text="VC HELP", url="https://telegra.ph/Shasa-Music-08-15"
+                            text="😎 APPEAL 😎", url="https://t.me/D3VIL_APPEAL"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="❤️ SUPPORT ❤️", url=f"https://telegram.dog/{SUPPORT_CHAT}"
+                            text="❤️ SUPPORT ❤️", url=f"https://t.me/D3VIL_BOT_SUPPORT"
                         ),
                         InlineKeyboardButton(
                             text="🥳 UPDATES 🥳", url="https://t.me/D3VIL_GFX"
