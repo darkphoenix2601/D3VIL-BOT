@@ -451,7 +451,7 @@ def makepack_internal(
         msg.reply_text("Failed to create sticker pack. Possibly due to blek mejik.")
 
 
-__mod_name__ = "Sticker"
+__mod_name__ = "STICKER 🔹"
 __help__ = """
 I can kang stickers tell u the id of stickers memify them 
   /kang to kang them
