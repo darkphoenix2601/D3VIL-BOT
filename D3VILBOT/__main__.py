@@ -53,7 +53,7 @@ from D3VILBOT.modules.helper_funcs.alternate import typing_action
 from D3VILBOT.modules.helper_funcs.chat_status import is_user_admin
 from D3VILBOT.modules.helper_funcs.misc import paginate_modules
 
-
+first_name = update.effective_user.first_name
 def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
@@ -85,7 +85,7 @@ START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
 PM_START_TEXT = """
 ────「 D3VIL BOT ✨💫[❤️](https://telegra.ph//file/1aaf829187e69fd4a83c9.jpg) 」────
 ╭────────────── 🥀🍃☘️
-HEY 
+HEY [first_name]
 I AM AN ADVANCED GROUP MANAGER BOT , WITH LOTS OF COOL FEATURES .
 For More Information Use the Button Below or Send /help 
 ╰────────────── 🥀🍃☘️
