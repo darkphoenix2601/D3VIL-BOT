@@ -83,9 +83,9 @@ HELP_MSG = "Click the button below to get help manu in your pm."
 START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
 
 PM_START_TEXT = """
-────「 [{}](https://telegra.ph/file/ae41ca22aaff27dfb50cc.jpg) 」────
+────「 [{}](http://telegra.ph//file/1aaf829187e69fd4a83c9.jpg) 」────
 *ʜᴇʏ! {},*
-*ɪ ᴀᴍ 𝐒𝐡𝐚𝐬𝐚 ᴀɴ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇᴅ ᴀᴅᴠᴀɴᴄᴇ ɢʀᴏᴜᴏ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ ᴀ ʟᴏᴛ ᴏғ sᴘᴇᴄɪᴀʟɪᴛʏ.*
+*ɪ ᴀᴍ 𝐃𝟑𝐕𝐈𝐋 𝐁𝐎𝐓😈  ᴀᴅᴠᴀɴᴄᴇ ɢʀᴏᴜᴏ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ ᴀ ʟᴏᴛ ᴏғ sᴘᴇᴄɪᴀʟɪᴛʏ.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ✓• *Uptime:* `{}`
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -100,7 +100,7 @@ Haven't slept since: {}
 buttons = [
     [
         InlineKeyboardButton(
-            text=f"Add D3VILBOT To Your Group",
+            text=f"Add 𝐃𝟑𝐕𝐈𝐋 𝐁𝐎𝐓😈 To Your Group",
             url=f"t.me/D3VIL_BOT?startgroup=true",
         )
     ],
@@ -115,8 +115,8 @@ buttons = [
 
 
 HELP_STRINGS = """
-Hey there! Myself [𝐒𝐡𝐚𝐬𝐚](https://telegra.ph/file/c3f91b87fa65cd83f306d.jpg).
-I'm a Queen For Fun and help admins manage their groups ! Have a look at the following for an idea of some of the things I can help you with.
+Hey there! Myself [D3VIL😈](http://telegra.ph//file/1aaf829187e69fd4a83c9.jpg).
+I'm a D3VIL  and help admins manage their groups ! Have a look at the following for an idea of some of the things I can help you with.
 
 *Main* commands available:
  ➛ /help: PM's you this message.
@@ -250,7 +250,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_animation(
             GROUP_START_IMG,
-            caption="<code>Shasa is Here For You💜\nI am Awake Since</code>: <code>{}</code>".format(
+            caption="<code>DEVIL is Here For You💜\nI am Awake Since</code>: <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -258,12 +258,12 @@ def start(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴘᴘᴏʀᴛ", url=f"https://telegram.dog/{SUPPORT_CHAT}"
+                            text="❤️ SUPPORT ❤️", url=f"https://telegram.dog/{SUPPORT_CHAT}"
                         )
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴜᴘᴅᴀᴛᴇs",
+                            text="🥳 UPDATES 🥳",
                             url="https://telegram.dog/LionXupdates",
                         )
                     ],
