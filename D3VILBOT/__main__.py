@@ -354,7 +354,7 @@ def help_button(update, context):
                                 text="【BACK 🔙】", callback_data="help_back"
                             ),
                             InlineKeyboardButton(
-                                text="【HOME 🏠】", callback_data="PM_START_TEXT"
+                                text="【HOME 🏠】", callback_data="shasa_back"
                             ),
                         ]
                     ]
