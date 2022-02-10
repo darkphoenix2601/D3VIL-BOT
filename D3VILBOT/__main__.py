@@ -85,7 +85,7 @@ START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
 PM_START_TEXT = """
 ────「 D3VIL BOT ✨💫❤️ 」────
 ╭────────────── 🥀🍃☘️
-HEY { FULL NAME }
+HEY 
 I AM AN ADVANCED GROUP MANAGER BOT , WITH LOTS OF COOL FEATURES .
 For More Information Use the Button Below or Send /help 
 ╰────────────── 🥀🍃☘️
