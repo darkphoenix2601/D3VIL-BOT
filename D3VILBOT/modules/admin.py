@@ -637,29 +637,33 @@ def adminlist(update, context):
 
 
 __help__ = """
-  /admins*:* list of admins in the chat
-*Admins only:*
-  /pin*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
-  /unpin*:* unpins the currently pinned message
-  /invitelink*:* gets invitelink
-  /promote*:* promotes the user
-  /demote*:* demotes the user
-  /title <title here>*:* sets a custom title for an admin that the bot promoted
-  /setgtitle <newtitle>*:* Sets new chat title in your group.
-  /setgpic*:* As a reply to file or photo to set group profile pic!
-  /delgpic*:* Same as above but to remove group profile pic.
-  /setsticker*:* As a reply to some sticker to set it as group sticker set!
-  /setdescription <description>*:* Sets new chat description in group.
-  /admincache*:* force refresh the admins list
-  /antispam <on/off/yes/no>*:* Will toggle our antispam tech or return your current settings.
-  /del*:* deletes the message you replied to
-  /purge*:* deletes all messages between this and the replied to message.
-  /purge <integer X>*:* deletes the replied message, and X messages following it if replied to a message.
-  /zombies: counts the number of deleted account in your group
-  /zombies clean: Remove deleted accounts from group..
-*Note:* Night Mode chats get Automatically closed at 12 am(IST)
-and Automatically openned at 6 am(IST) To Prevent Night Spams.
-⚠️ `Read from top`
+  Admin button ka
+
+╒═══≼ MENU OF「 ADMIN 🌟 」MODULE : 
+
+  /admins: LIST OF ADMINS IN THE CHAT
+ADMINS ONLY:
+  /pin: SILENTLY PINS THE MESSAGE REPLIED TO - ADD 'LOUD' OR 'NOTIFY' TO GIVE NOTIFY TO USERS
+  /unpin: UNPINS THE CURRENTLY PINNED MESSAGE
+  /invitelink: GETS INVITELINK
+  /promote: PROMOTES THE USER
+  /demote: DENOTES THE USER
+  /title <title here>: SETS A CUSTOM TITLE FOR AN ADMIN THAT THE BOT PROMOTED
+  /setgtitle <newtitle>: SETS NEW CHAT TITLE IN YOUR GROUP.
+  /setgpic: AS A REPLY TO FILE OR PHOTO TO SET GROUP PROFILE PIC!
+  /delgpic: SAME AS ABOVE BUT TO REMOVE GROUP PROFILE PIC.
+  /setsticker: AS A REPLY TO SOME STICKER TO SET IT AS GROUP STICKER SET!
+  /setdescription <description>: SETS NEW CHAT DESCRIPTION IN GROUP.
+  /admincache: FORCE REFRESH THE ADMINS LIST
+  /antispam <on/off/yes/no>: WILL TOGGLE OUR ANTISPAM TECH OR return YOUR CURRENT SETTINGS.
+  /del: DELETES THE MESSAGE YOU REPLIED TO
+  /purge: DELETES ALL MESSAGES BETWEEN THIS AND THE REPLIED TO MESSAGE.
+  /purge <integer X>: DELETED THE REPLIED MESSAGE, AND X MESSAGES FOLLOWING IT IF REPLIED TO A message.
+  /zombies : COUNTS THE NUMBER OF DELETED ACCOUNT IN YOUR GROUP
+  /zombies clean: REMOVE DELETED ACCOUNTS FROM GROUP..
+NOTE : NIGHT MODE CHATS GET AUTOMATICALLY CLOSED AT 12 AM(IST)
+AND AUTOMATICALLY OPENED AT 6 AM(IST) TO PREVENT NIGHT SPAMS.
+⚠️ READ FROM TOP
 """
 
 ADMINLIST_HANDLER = DisableAbleCommandHandler("admins", adminlist)
