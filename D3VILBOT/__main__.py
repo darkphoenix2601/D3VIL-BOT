@@ -83,15 +83,12 @@ HELP_MSG = "Click the button below to get help manu in your pm."
 START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
 
 PM_START_TEXT = """
-────「 D3VIL BOT ✨💫❤️ 」────
+────「 D3VIL BOT ✨💫[❤️](https://telegra.ph//file/1aaf829187e69fd4a83c9.jpg) 」────
 ╭────────────── 🥀🍃☘️
 HEY 
 I AM AN ADVANCED GROUP MANAGER BOT , WITH LOTS OF COOL FEATURES .
 For More Information Use the Button Below or Send /help 
 ╰────────────── 🥀🍃☘️
-───────────────────────
-
-───────────────────────
 ❥ TRY THE HELP BUTTONS BELOW TO KNOW MY ABILITIES
 """
 
@@ -118,7 +115,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-HEY THERE IS [D3VIL😈](http://telegra.ph//file/1aaf829187e69fd4a83c9.jpg).
+HEY THERE IS D3VIL[😈](http://telegra.ph//file/1aaf829187e69fd4a83c9.jpg) .
 I'M HERE FOR FUN AND HELP ADMINS MANAGE THEIR GROUPS ! HAVE A LOOK AT THE FOLLOWING FOR AN IDEA OF SOME OF THE THINGS I CAN HELP YOU WITH.
 
 MAIN COMMANDS AVAILABLE :
