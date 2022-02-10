@@ -214,7 +214,7 @@ def start(update: Update, context: CallbackContext):
                         [
                             [
                                 InlineKeyboardButton(
-                                    text="[•༶B𝚊𝚌k༶•]", callback_data="help_back"
+                                    text="[BACK 🔙]", callback_data="help_back"
                                 )
                             ]
                         ]
@@ -264,7 +264,7 @@ def start(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="🥳 UPDATES 🥳",
-                            url="https://telegram.dog/LionXupdates",
+                            url="https://t.me/D3VIL_GFX",
                         )
                     ],
                 ]
@@ -351,10 +351,10 @@ def help_button(update, context):
                     [
                         [
                             InlineKeyboardButton(
-                                text="【༶Back༶】", callback_data="help_back"
+                                text="【BACK 🔙】", callback_data="help_back"
                             ),
                             InlineKeyboardButton(
-                                text="【༶Home༶】", callback_data="shasa_back"
+                                text="【HOME 🏠】", callback_data="start"
                             ),
                         ]
                     ]
@@ -451,7 +451,7 @@ def shasa_callback_data(update, context):
     elif query.data == "shasa_admin":
         query.message.edit_text(
             text=f"*Let's make your group bit effective now*"
-            f"\nCongragulations, Miss Shasa now ready to manage your group."
+            f"\nCongragulations, D3VIL now ready to manage your group."
             f"\n\n*Admin Tools*"
             f"\nBasic Admin tools help you to protect and powerup your group."
             f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -464,7 +464,7 @@ def shasa_callback_data(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="•༶Bᴀᴄᴋ༶•", callback_data="shasa_basichelp"
+                            text="BACK 🔙", callback_data="shasa_basichelp"
                         )
                     ]
                 ]
@@ -482,7 +482,7 @@ def shasa_callback_data(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="•༶Bᴀᴄᴋ༶•", callback_data="shasa_basichelp"
+                            text="BACK 🔙", callback_data="shasa_basichelp"
                         )
                     ]
                 ]
@@ -495,22 +495,22 @@ def shasa_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", url="t.me/Shasa_News"),
+                        InlineKeyboardButton(text="ABOUT ", url="https://t.me/D3VIL_GFX"),
                         InlineKeyboardButton(
-                            text="ᴠᴄ ʜᴇʟᴘ", url="https://telegra.ph/Shasa-Music-08-15"
+                            text="VC HELP", url="https://telegra.ph/Shasa-Music-08-15"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴘᴘᴏʀᴛ", url=f"https://telegram.dog/{SUPPORT_CHAT}"
+                            text="❤️ SUPPORT ❤️", url=f"https://telegram.dog/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="ᴜᴘᴅᴀᴛᴇs", url="https://t.me/LionXupdates"
+                            text="🥳 UPDATES 🥳", url="https://t.me/D3VIL_GFX"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="•༶Bᴀᴄᴋ༶•", callback_data="shasa_basichelp"
+                            text="BACK 🔙", callback_data="shasa_basichelp"
                         ),
                     ],
                 ]
@@ -524,22 +524,22 @@ def shasa_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="ᴅᴇᴠ", url="t.me/simpleboy786"),
+                        InlineKeyboardButton(text="DEV👨‍💻", url="https://t.me/Professor_Ashu"),
                         InlineKeyboardButton(
-                            text="ɢɪᴛʜᴜʙ", url="https://github.com/MdNoor786"
+                            text="GITHUB", url="https://github.com/D3VILGULSHAN/"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴅᴇᴠ²", url="https://t.me/Copyless786"
+                            text="DEV👨‍💻²", url="https://t.me/D3VILGULSHAN"
                         ),
                         InlineKeyboardButton(
-                            text="ʀᴇᴅʟɪᴏɴ", url="https://t.me/Shasa_News/12"
+                            text="D3VIL", url="https://t.me/Shasa_News/12"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="•༶Bᴀᴄᴋ༶•", callback_data="shasa_basichelp"
+                            text="BACK 🔙", callback_data="shasa_basichelp"
                         ),
                     ],
                 ]
