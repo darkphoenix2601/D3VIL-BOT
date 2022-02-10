@@ -83,13 +83,16 @@ HELP_MSG = "Click the button below to get help manu in your pm."
 START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
 
 PM_START_TEXT = """
-────「 [{}](http://telegra.ph//file/1aaf829187e69fd4a83c9.jpg) 」────
-*ʜᴇʏ! {},*
-*ɪ ᴀᴍ 𝐃𝟑𝐕𝐈𝐋 𝐁𝐎𝐓😈  ᴀᴅᴠᴀɴᴄᴇ ɢʀᴏᴜᴏ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ ᴀ ʟᴏᴛ ᴏғ sᴘᴇᴄɪᴀʟɪᴛʏ.*
-➖➖➖➖➖➖➖➖➖➖➖➖➖
-✓• *Uptime:* `{}`
-➖➖➖➖➖➖➖➖➖➖➖➖➖
-➛ᴛʀʏ ᴛʜᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ᴛᴏ ᴋɴᴏᴡ ᴍʏ ᴀʙɪʟɪᴛɪᴇs ××
+────「 D3VIL BOT ✨💫❤️ 」────
+╭────────────── 🥀🍃☘️
+HEY { FULL NAME }
+I AM AN ADVANCED GROUP MANAGER BOT , WITH LOTS OF COOL FEATURES .
+For More Information Use the Button Below or Send /help 
+╰────────────── 🥀🍃☘️
+───────────────────────
+
+───────────────────────
+❥ TRY THE HELP BUTTONS BELOW TO KNOW MY ABILITIES
 """
 
 GROUP_START_TEXT = """
@@ -115,16 +118,16 @@ buttons = [
 
 
 HELP_STRINGS = """
-Hey there! Myself [D3VIL😈](http://telegra.ph//file/1aaf829187e69fd4a83c9.jpg).
-I'm a D3VIL  and help admins manage their groups ! Have a look at the following for an idea of some of the things I can help you with.
+HEY THERE IS [D3VIL😈](http://telegra.ph//file/1aaf829187e69fd4a83c9.jpg).
+I'M HERE FOR FUN AND HELP ADMINS MANAGE THEIR GROUPS ! HAVE A LOOK AT THE FOLLOWING FOR AN IDEA OF SOME OF THE THINGS I CAN HELP YOU WITH.
 
-*Main* commands available:
- ➛ /help: PM's you this message.
- ➛ /help <module name>: PM's you info about that module.
- ➛ /donate: information on how to donate!
- ➛ /settings:
-   ❂ in PM: will send you your settings for all supported modules.
-   ❂ in a group: will redirect you to pm, with all that chat's settings.
+MAIN COMMANDS AVAILABLE :
+ ❥ /help: PM's YOU THIS MESSAGE .
+ ❥ /help <module name>: PM'S YOU INFO ABOUT THAT MODULE.
+ ❥ /donate: INFORMATION ON HOW TO DONATE!
+ ❥ /settings:
+   ༄ IN PM: WILL SEND YOU YOUR SETTINGS FOR ALL SUPPORTED MODULES ༆
+   ༄ IN A GROUP : WILL REDIRECT YOU TO PM, WITH ALL THAT CHAT'S SETTINGS ༆
 """
 
 DONATE_STRING = """❂ I'm Free for Everyone ❂"""
@@ -421,7 +424,7 @@ def shasa_callback_data(update, context):
             text=f"*Here's basic Help regarding* *How to use Me?*"
             f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n• After adding promote me manually with full rights for faster experience.\n"
-            f"\n• Than send `/admincache@Shasa_RoBot` in that chat to refresh admin list in My database.\n"
+            f"\n• Than send `/admincache@D3VIL_BOT` in that chat to refresh admin list in My database.\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -429,20 +432,20 @@ def shasa_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="ᴀᴅᴍɪɴ", callback_data="shasa_admin"),
-                        InlineKeyboardButton(text="ɴᴏᴛᴇs", callback_data="shasa_notes"),
+                        InlineKeyboardButton(text="ADMIN", callback_data="shasa_admin"),
+                        InlineKeyboardButton(text="NOTES", callback_data="shasa_notes"),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴘᴘᴏʀᴛ", callback_data="shasa_support"
+                            text="SUPPORT", callback_data="shasa_support"
                         ),
                         InlineKeyboardButton(
-                            text="ᴄʀᴇᴅɪᴛ", callback_data="shasa_credit"
+                            text="CREDIT", callback_data="shasa_credit"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="•༶Bᴀᴄᴋ༶•", callback_data="shasa_back"
+                            text="BACK", callback_data="shasa_back"
                         ),
                     ],
                 ]
