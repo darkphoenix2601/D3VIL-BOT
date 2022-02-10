@@ -7,13 +7,13 @@ from D3VILBOT import LOAD, NO_LOAD
 
 
 class EqInlineKeyboardButton(InlineKeyboardButton):
-    def eq(self, other):
+    def __eq__(self, other):
         return self.text == other.text
 
-    def lt(self, other):
+    def __lt__(self, other):
         return self.text < other.text
 
-    def gt(self, other):
+    def __gt__(self, other):
         return self.text > other.text
 
 
@@ -41,9 +41,9 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
         modules = sorted(
             [
                 EqInlineKeyboardButton(
-                    x.mod_name,
+                    x.__mod_name__,
                     callback_data="{}_module({})".format(
-                        prefix, x.mod_name.lower()
+                        prefix, x.__mod_name__.lower()
                     ),
                 )
                 for x in module_dict.values()
@@ -53,22 +53,22 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
         modules = sorted(
             [
                 EqInlineKeyboardButton(
-                    x.mod_name,
+                    x.__mod_name__,
                     callback_data="{}_module({},{})".format(
-                        prefix, chat, x.mod_name.lower()
+                        prefix, chat, x.__mod_name__.lower()
                     ),
                 )
                 for x in module_dict.values()
             ]
         )
 
-            pairs = [modules[i * 3 : (i + 1) * 3] for i in range((len(modules) + 3 - 1) // 3)]
+    pairs = [modules[i * 3 : (i + 1) * 3] for i in range((len(modules) + 3 - 1) // 3)]
     round_num = len(modules) / 3
     calc = len(modules) - round(round_num)
     if calc in [1, 2]:
         pairs.append([modules[-1]])
     else:
-        pairs += [[EqInlineKeyboardButton("HOME🏠", callback_data="shasa_back")]]
+        pairs += [[EqInlineKeyboardButton("HOME 🏠", callback_data="shasa_back")]]
     return pairs
 
 
