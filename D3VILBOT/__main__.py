@@ -518,7 +518,7 @@ def shasa_callback_data(update, context):
         )
     elif query.data == "shasa_credit":
         query.message.edit_text(
-            text=f"<b> SHASA DEV'S</b>\n"
+            text=f"<b> D3VIL BOT DEV'S</b>\n"
             f"\nHere Some Developers Helping in Making The D3VIL BOT",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
